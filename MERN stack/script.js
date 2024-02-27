@@ -1,6 +1,6 @@
 /**
  * Client side language
- * DOM Tree
+ * DOM Tree - Document Object Model
  * callback, promises, async/await
  * Single threaded as well as asynchronous language
  * case sensitive
