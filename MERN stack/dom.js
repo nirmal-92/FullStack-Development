@@ -9,9 +9,9 @@
 function changeText(){
     //console.log('welcome')
     //console.log(greetingsElement.textContent)
-    greetingsElement.textContent = 'Nirmal'
+    greetingsElement.textContent = 'STOP'
 }
-const greetingsElement = document.getElementById('greetings')
+const greetingsElement = document.getElementById('get')
 greetingsElement.addEventListener('click', changeText)
 
 //changed while mouseover
@@ -20,10 +20,3 @@ function changeText1(){
 }
 const identifyElement = document.getElementById('info')
 identifyElement.addEventListener('mouseover',changeText1)
-
-//changes while btn clicked
-function changeButtonText(){
-    console.log('New Button')
-}
-const changeButton = document.getElementById('get')
-changeButton.addEventListener('click', changeButtonText)

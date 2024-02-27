@@ -1,10 +1,19 @@
 #get{
     font-size: 20px;
-    background-color:coral;
+    background-color:green;
     border-radius: 8px;
+    padding: 4px;
+    justify-content: center;
+    width: fit-content;
+
 }
-
-
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
 
 .custom{
     /* px, vw, rem */
