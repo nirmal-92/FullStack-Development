@@ -6,7 +6,9 @@
  */
 
 function changeText(){
-    console.log('welcome')
+    //console.log('welcome')
+    //console.log(greetingsElement.textContent)
+    greetingsElement.textContent = 'Nirmal'
 }
 const greetingsElement = document.getElementById('greetings')
 greetingsElement.addEventListener('click', changeText)
@@ -16,4 +18,4 @@ function changeText1(){
     console.log('I am Nirmal')
 }
 const identifyElement = document.getElementById('info')
-identifyElement.addEventListener('click',changeText1)
+identifyElement.addEventListener('mouseover',changeText1)
