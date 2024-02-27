@@ -34,3 +34,17 @@ const s5 = {
 }
 const studentdetails = [s1, s2, s3, s4, s5]
 console.log(studentdetails)
+
+//retrieving particular data using obj.<varible>
+console.log(s2.studentname)
+
+//sorting the cgpa in decending order
+cgpa.sort(function(x, y) {
+    return x - y
+})
+console.log(cgpa)
+
+studentdetails.sort(function(s1, s2){
+    return s2.cgpa - s1.cgpa
+})
+console.log(studentdetails)
