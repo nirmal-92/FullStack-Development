@@ -35,13 +35,14 @@ function startTimer() {
 }   
 
 function stopTimer() {
+    clearTimeout(time);
     hr = 0;
     min = 0;
     sec = 0;
     document.getElementById("hr").textContent = '00';
     document.getElementById("min").textContent = '00';
     document.getElementById("sec").textContent = '00';
-    if (get)
+    
 }
 
 function changeText(){
