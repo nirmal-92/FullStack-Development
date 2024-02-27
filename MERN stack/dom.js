@@ -5,6 +5,7 @@
  * step4 - defining the function
  */
 
+//changes while clicked
 function changeText(){
     //console.log('welcome')
     //console.log(greetingsElement.textContent)
@@ -13,9 +14,16 @@ function changeText(){
 const greetingsElement = document.getElementById('greetings')
 greetingsElement.addEventListener('click', changeText)
 
-
+//changed while mouseover
 function changeText1(){
     console.log('I am Nirmal')
 }
 const identifyElement = document.getElementById('info')
 identifyElement.addEventListener('mouseover',changeText1)
+
+//changes while btn clicked
+function changeButtonText(){
+    console.log('New Button')
+}
+const changeButton = document.getElementById('get')
+changeButton.addEventListener('click', changeButtonText)

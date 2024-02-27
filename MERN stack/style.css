@@ -1,0 +1,15 @@
+#greetings{
+    font-size: 30px;
+}
+
+
+
+.custom{
+    /* px, vw, rem */
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    width: 65px;
+    text-align:center;
+    cursor:zoom-in;
+}
