@@ -42,6 +42,7 @@ function stopTimer() {
     document.getElementById("hr").textContent = '00';
     document.getElementById("min").textContent = '00';
     document.getElementById("sec").textContent = '00';
+    timelogsElement.textContent = '<p>'; hr. textContent + ' : ' + min.textContent + ' : ' + sec.textContent ;'</p>'
     
 }
 
@@ -61,3 +62,4 @@ function changeText(){
 }
     const greetingsElement = document.getElementById('get')
     greetingsElement.addEventListener('click', changeText)
+    const timelogsElement = document.getElementById('timelogs')
