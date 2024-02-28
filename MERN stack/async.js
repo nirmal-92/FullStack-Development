@@ -11,3 +11,8 @@ function displayData(data) {
 
 const data =  getData()
 displayData(data)
+console.log(1)
+setTimeout(() => {
+    console.log(2)
+},3000
+)
