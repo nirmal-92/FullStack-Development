@@ -29,3 +29,24 @@ if (m == n){
 else{
     console.log('not equal')
 }
+
+//for loops using of and in
+for(const point in points){
+    console.log(point)
+}
+for(const ind of points){
+    console.log(ind)
+}
+
+//forEach loop
+points.forEach(function(points){
+    console.log(points)
+})
+
+//array destruction
+// let g = 5
+// let f = 6
+// let l = 7
+const [g, ...f] = [5, 6, 7, 8, 9]
+console.log(g)
+console.log(f)
