@@ -1,12 +1,31 @@
 .circle{
+    text-align: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background: red;
     border-radius: 50%;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
 }
 
 .square{
+    text-align: center;
+    align-content: center;
+    flex-direction: row;
     width: 100px;
     height: 100px;
     background: blue;
+    align-items: center;
+    align-content: center;
+}
+body{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    text-decoration: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    flex-direction: row;
 }
