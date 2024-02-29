@@ -34,3 +34,9 @@ db.BookCollections.find({$or : [{"author" : "Douglas Adams"} , {"author" : "Bill
 db.BookCollections.find({"authors" : {$in : ["W.Frederick Zimmerman", "J.K. Rowling/Mary GrandPré"]}})
 db.BookCollections.find({"authors" : {$nin : ["W.Frederick Zimmerman", "J.K. Rowling/Mary GrandPré"]}})
 ```
+
+### gt,lt,gte,lte
+db.BookCollections.find({"average_rating" : {$gte : 4}}).count()
+db.BookCollections.find({"authors" : "J.K. Rowling/Mary GrandPré", "average_rating" : {$gte : 4.5}}).count()
+db.BookCollections.find({"average_rating" : {$gte : 4.7, $lte : 4.8}}).count()
+db.BookCollections.find({"average_rating" : {$gt : 4.1, $lt : 4.2}}).sort("average_rating" , -1).limit(3)
