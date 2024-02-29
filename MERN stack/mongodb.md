@@ -38,5 +38,9 @@ db.BookCollections.find({"authors" : {$nin : ["W.Frederick Zimmerman", "J.K. Row
 ### gt,lt,gte,lte
 db.BookCollections.find({"average_rating" : {$gte : 4}}).count()
 db.BookCollections.find({"authors" : "J.K. Rowling/Mary GrandPré", "average_rating" : {$gte : 4.5}}).count()
+<<<<<<< HEAD
 db.BookCollections.find({"average_rating" : {$gte : 4.7, $lte : 4.8}}).count()
 db.BookCollections.find({"average_rating" : {$gt : 4.1, $lt : 4.2}}).sort("average_rating" , -1).limit(3)
+=======
+db.BookCollections.find({"average_rating" : {$gte : 4.7, $lte : 4.8}}).count()
+>>>>>>> f5de417f4f94ed4ce97a86457ac0be782777f85c
