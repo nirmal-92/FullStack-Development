@@ -1,9 +1,13 @@
 /**
  * Runtime Environment for Javascript
  * Server side Language
+ * yarn, npm - node package manager
 */
 /**
  * to execute : node <filename>
+ * npm install <package_name> / npm i <package_name>
+ * npm uninstall <package_name>
+ * nodemon
  */
 console.log('Hello')
 const arr = [1,2,3,4,5]
