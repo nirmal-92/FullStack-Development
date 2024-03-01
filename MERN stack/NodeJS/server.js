@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 /**
  * Runtime Environment for Javascript
  * Server side Language
@@ -14,8 +16,16 @@
  * npm init
  * npm init -y
  */
+/**
+ * read/write file - Asynchronous
+ * read/write fileSync - Synchronous - stores data
+ */
 console.log('Hello')
-const arr = [1,2,3,4,5,6]
-for(const n of arr){
-    console.log(n * 8)
-}
+
+// const data = fs.readFileSync('./data.json')
+// console.log(data)
+
+// fs.readFile('./data.json', function(data))
+//     console.log(data)
+
+
