@@ -15,7 +15,7 @@
  * npm init -y
  */
 console.log('Hello')
-const arr = [1,2,3]
+const arr = [1,2,3,4,5,6]
 for(const n of arr){
-    console.log(n * 4)
+    console.log(n * 8)
 }
