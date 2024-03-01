@@ -44,7 +44,7 @@ fs.readFile('./data.json', function(error, file){
     const data = JSON.parse(file)
     //console.log(data.IMDb)
     console.log(data)
-    data.IMDb = 8.7
+    data.IMDb = 7.7
     console.log(data)
     // fs.writeFileSync('./data.json',JSON.stringify(data))
     fs.writeFile('./data.json', JSON.stringify(data),
