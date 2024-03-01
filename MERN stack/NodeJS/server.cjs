@@ -33,6 +33,7 @@ console.log('Hello')
  */
 
 /**
+ * readFile
  * fs.readFile('./data.json', function(error, file){
  * const data = JSON.parse(file)
  * console.log(data)
