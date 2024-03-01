@@ -21,11 +21,25 @@ const fs = require('fs')
  * read/write fileSync - Synchronous - stores data
  */
 console.log('Hello')
+//serealize - JSON.stringyfy()
+//deserealize - JSON.parse()
 
-// const data = fs.readFileSync('./data.json')
-// console.log(data)
+/**
+ * readfileSync
+ * const file = fs.readFileSync('./data.json')
+ * const data = JSON.parse(file)
+ * console.log(file)
+ * console.log(data)
+ */
 
-// fs.readFile('./data.json', function(data))
-//     console.log(data)
+/**
+ * fs.readFile('./data.json', function(error, file){
+ * const data = JSON.parse(file)
+ * console.log(data)
+ * })
+ */
+
+
+
 
 
