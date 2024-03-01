@@ -9,6 +9,10 @@
  * npm uninstall <package_name>
  * nodemon
  */
+/**
+ * npm init
+ * npm init -y
+ */
 console.log('Hello')
 const arr = [1,2,3,4,5]
 for(const n of arr){
