@@ -19,8 +19,8 @@ const bodyParser = require('body-parser')
 const mongoose=require('mongoose')
 const express =require('express')
 const{Expense} = require('./schema.js')
- const app = express()
- app.use(bodyParser.json)
+const app = express()
+app.use(bodyParser.json)
 
  async function connectToDb() {
     await mongoose.connect('mongodb+srv://Jayshree:Jay3107@cluster0.56k4uif.mongodb.net/ExpenseTracker?retryWrites=true&w=majority&appName=Cluster0')
