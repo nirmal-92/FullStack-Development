@@ -1,65 +1,66 @@
-var mode = 0
-let hr = 0
-let min = 0
-let sec = 0
+const hourElement = document.getElementById('hour')
+const minuteElement = document.getElementById('minute')
+const secondsElement = document.getElementById("seconds")
+const timeLogs = document.getElementById('timelogs')
+const stopElement = document.getElementById('change-start')
 
-let time
-function startTimer() {
-    time = setTimeout(function () {
-        sec++;
-        if (sec > 59) {
-            sec = 0;
-            min++;
-            if (min > 59) {
-                min = 0;
-                hr++;
-                if (hr < 10) {
-                    document.getElementById("hr").textContent = '0' + hr + ':';
-                } else {
-                    document.getElementById("hr").textContent = hr + ':';
-                }
-            }
-            if (min < 10) {
-                document.getElementById("min").textContent = '0' + min + ':';
-            } else {
-                document.getElementById("min").textContent = min + ':';
-            }
+
+function Clickstop(){
+    if(stopElement.textContent === 'START'){
+    stopElement.textContent = 'STOP'
+    stopElement.style.setProperty('background-color','rgb(222, 28, 14)')
+    startTimer()
+    }else{
+    stopElement.textContent = 'START'
+    stopElement.style.setProperty('background-color','rgb(6, 127, 14)')
+    stopTimer()
+    }
+}
+
+/**
+ * setInterval, clearInterval
+ * setTimeout
+ */
+
+// setTimeout(()=>{
+//     console.log('hello')
+// },3000)
+// let i = 1
+// setInterval(() => {
+//     console.log(i++)
+// }, 1000);
+let interval
+function startTimer(){
+    let s = 1;
+    let m = 1;
+    let h = 1;
+    interval = setInterval(() => {
+        if(m > 59 && s > 59){
+            s = 0
+            m = 0
+            minuteElement.textContent=(m++).toString().padStart(2,0)
+            hourElement.textContent=(h++).toString().padStart(2,0)
         }
-        if (sec < 10) {
-            document.getElementById("sec").textContent = '0' + sec ;
-        } else {
-            document.getElementById("sec").textContent = sec ;
+        else if(s > 59){
+            s = 0
+            minuteElement.textContent=(m++).toString().padStart(2,0)
+            
         }
-        startTimer();
+        secondsElement.textContent=(s++).toString().padStart(2,0)
+        
     }, 1000);
-}   
-
-function stopTimer() {
-    clearTimeout(time);
-    hr = 0;
-    min = 0;
-    sec = 0;
-    document.getElementById("hr").textContent = '00';
-    document.getElementById("min").textContent = '00';
-    document.getElementById("sec").textContent = '00';
-    timelogsElement.textContent = '<p>'; hr. textContent + ' : ' + min.textContent + ' : ' + sec.textContent ;'</p>'
     
+
+}
+function stopTimer(){
+    clearInterval(interval)
+    timeLogs.innerHTML += `
+        <p> ${hourElement.textContent} : ${minuteElement.textContent} : ${secondsElement.textContent} </p>
+    `
+    // resetting the timer
+    secondsElement.textContent = '00'
+    minuteElement.textContent = '00'
+    hourElement.textContent = '00'
 }
 
-function changeText(){
-    if (mode == 0){
-        greetingsElement.textContent = 'STOP'
-        greetingsElement.style.background = 'red'
-        mode = 1
-        startTimer()
-    }
-    else{
-        mode = 0
-        greetingsElement.style.background = 'green'
-        greetingsElement.textContent = 'START'
-        stopTimer()
-    }
-}
-    const greetingsElement = document.getElementById('get')
-    greetingsElement.addEventListener('click', changeText)
-    const timelogsElement = document.getElementById('timelogs')
+stopElement.addEventListener('click',Clickstop)

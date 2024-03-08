@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.20.2"
+  },
+  "dependencies": {
+    "mongodb": "^6.4.0"
   }
 }
