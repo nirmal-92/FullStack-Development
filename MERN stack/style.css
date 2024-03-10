@@ -19,18 +19,6 @@ body{
 }
 
 
-/*.stop-css{
-    background-color: rgb(222, 28, 14);
-    color: aliceblue;
-    width: 70px;
-    height: 25px;
-   cursor: pointer;
-   border-radius: 8px;
-   font-size: 18px;
-   text-align: center;
-   border: 4px solid black;
-}*/
-
 .timer{
     display :flex;
     gap: 4px;
